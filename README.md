@@ -1,8 +1,5 @@
 # Printf Project
 
-[![License](https://img.shields.io/github/license/YovsefMo/printf)](LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/YovsefMo/printf)](https://github.com/YovsefMo/printf/graphs/contributors)
-
 ## Overview
 
 This is the printf project, an implementation of the C standard library's `printf` function. The project is authored by [Yousef Mohsen](https://github.com/YovsefMo) (GitHub: YovsefMo) and [Ahmed Ayman](https://github.com/Ahmed-Mogahed) (GitHub: Ahmed-Mogahed).
