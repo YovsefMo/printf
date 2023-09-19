@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 	while (*format)
@@ -36,11 +36,6 @@ int _printf(const char *format, ...)
 			{
 				di = va_arg(args, int);
 				p_counter += _printf_integer(di);
-			}
-			else if (*format == 'b')
-			{
-				p_counter += _printf_binary(args);
-				format++;
 			}
 		}
 		format++;
