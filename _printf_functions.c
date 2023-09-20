@@ -64,7 +64,6 @@ int _printf_integer(int di)
 	{
 		write(1, "-", 1);
 		p_counter++;
-		di++;
 		di = -di;
 	}
 
