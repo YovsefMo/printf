@@ -23,10 +23,14 @@ int _printf_char_string_percent(va_list args, const char *format)
 	{
 		s = va_arg(args, char *);
 
-		if (s != NULL)
+		if (s == NULL)
+		{
+			write(1, "(null)", 6);
+			p_counter += 6;
+		}
+		else
 		{
 			size_t len = strlen(s);
-
 			write(1, s, len);
 			p_counter += len;
 		}
@@ -35,6 +39,12 @@ int _printf_char_string_percent(va_list args, const char *format)
 	{
 		write(1, "%", 1);
 		p_counter++;
+	}
+	else
+	{
+		write(1, "%", 1);
+		write(1, format - 1, 1);
+		p_counter += 2;
 	}
 	return (p_counter);
 }
