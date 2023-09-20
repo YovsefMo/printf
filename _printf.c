@@ -37,7 +37,6 @@ int _printf(const char *format, ...)
 				di = va_arg(args, int);
 				p_counter += _printf_integer(di);
 			}
-			else
 		}
 		format++;
 	}
