@@ -38,11 +38,6 @@ int _printf(const char *format, ...)
 				p_counter += _printf_integer(di);
 			}
 			else
-			{
-				write(1, "%", 1);
-				write(1, format -1, 1);
-				p_counter += 2;
-			}
 		}
 		format++;
 	}
