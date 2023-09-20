@@ -43,12 +43,6 @@ int _printf_char_string_percent(va_list args, const char *format)
 		write(1, "%", 1);
 		p_counter++;
 	}
-	else
-	{
-		write(1, "%", 1);
-		write(1, format - 1, 1);
-		p_counter += 2;
-	}
 	return (p_counter);
 }
 /**
