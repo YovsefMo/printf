@@ -30,9 +30,12 @@ int _printf_char_string_percent(va_list args, const char *format)
 		}
 		else
 		{
-			size_t len = strlen(s);
-			write(1, s, len);
-			p_counter += len;
+			while (*s)
+			{
+				write(1, s, 1);
+				s++;
+				p_counter++;
+			}
 		}
 	}
 	else if (*format == '%')
