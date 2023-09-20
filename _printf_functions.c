@@ -64,10 +64,12 @@ int _printf_integer(int di)
 	{
 		write(1, "-", 1);
 		p_counter++;
+		di++;
 		di = -di;
 	}
 
 	tmpo = di;
+
 	do {
 		tmpo /= 10;
 		di_counter++;
@@ -81,42 +83,6 @@ int _printf_integer(int di)
 
 	write(1, buffer, di_counter);
 	p_counter += di_counter;
-
-	return (p_counter);
-}
-/**
- * _printf_binary - Converts an unsigned int to binary and prints it
- * @args: Arguments list containing the unsigned int
- *
- * Return: Number of characters printed
- */
-int _printf_binary(va_list args)
-{
-	unsigned int num = va_arg(args, unsigned int);
-	unsigned int mask = 1 << (sizeof(unsigned int) * 8 - 1);
-	int p_counter = 0;
-	int started = 0;
-
-	if (num == 0)
-	{
-		write(1, "0", 1);
-		return (1);
-	}
-
-	while (mask > 0)
-	{
-		if ((num & mask) || started)
-		{
-			char c = (num & mask) ? '1' : '0';
-
-			write(1, &c, 1);
-			p_counter++;
-			started = 1;
-		}
-		mask >>= 1;
-	}
-	write(1, "\n", 1);
-	p_counter++;
 
 	return (p_counter);
 }
