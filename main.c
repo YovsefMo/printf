@@ -8,6 +8,7 @@
  *
  * Return: 0 on success, error code otherwise
  */
+
 int main(void)
 {
 	int len, len2;
