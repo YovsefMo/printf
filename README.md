@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# printf.
-=======
 # Printf Project
 
 ## Overview
@@ -69,5 +66,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Yousef Mohsen (GitHub: YovsefMo)
 Ahmed Ayman (GitHub: Ahmed-Mogahed)
 
-This markdown README.md file can be used in your GitHub repository for the printf project.
->>>>>>> 7e0221190cc671179776595e34339666996d5c21
