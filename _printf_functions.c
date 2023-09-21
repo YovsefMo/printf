@@ -6,7 +6,6 @@
  *
  * Return: Number of characters printed
  */
-
 int _printf_char_string_percent(va_list args, const char *format)
 {
 	int p_counter = 0;
